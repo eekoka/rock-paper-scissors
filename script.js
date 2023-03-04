@@ -15,6 +15,24 @@ function getComputerChoice() {
    return computerChoice;
 }
 
+function getPlayerChoice () {
+   let playerChoice;
+   let validEntry;
+   let extraMessage = "";
+
+   do {
+      playerChoice = prompt(extraMessage + "Rock, Paper or Scissors?");
+      validEntry = playerChoice.toUpperCase() == "ROCK" || 
+                   playerChoice.toUpperCase() == "PAPER" ||
+                   playerChoice.toUpperCase() == "SCISSORS";
+      
+      if (validEntry == false) extraMessage = "Dude! That was an invalid entry: " + playerChoice + "\nPlease Try Again!\n";
+   }
+   while (validEntry !== true);  
+
+   console.log("Player Choice: " + playerChoice);
+   return playerChoice;
+}
 
 function playRound(playerSelection, computerSelection) {
    playerSelection = playerSelection.toUpperCase();
@@ -38,6 +56,7 @@ function game (totalRounds=5) {
    let playerScore = 0;
    let computerScore = 0;
    //const totalRounds = 5;
+   let playerVerdict;
    let r = 1;
 
    //update code at a later stage to allow player to choose total number of rounds to play
@@ -46,11 +65,10 @@ function game (totalRounds=5) {
      console.log("Round " + r);
 
      //make a function to get player choice and validate of entry if typed in
-     const playerSelection = "Rock";
-     console.log("Player Choice: " + playerSelection);
+     const playerSelection = getPlayerChoice();
      const computerSelection = getComputerChoice();
 
-     let playerVerdict = playRound(playerSelection, computerSelection);
+     playerVerdict = playRound(playerSelection, computerSelection);
      console.log("You " + playerVerdict + " Round");
      
      if (playerVerdict == "Win") {
@@ -71,4 +89,4 @@ function game (totalRounds=5) {
    if (playerScore == 0) console.log("YOU GOT WRECKED!!!");
 }
 
-game(3);
+game();
