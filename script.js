@@ -35,7 +35,6 @@ function game (totalRounds=5) {
 
    console.log(totalRounds + "-round Game Not Counting Draws.");
 
-   let playerVerdict;
    let playerScore = 0;
    let computerScore = 0;
    //const totalRounds = 5;
@@ -51,7 +50,7 @@ function game (totalRounds=5) {
      console.log("Player Choice: " + playerSelection);
      const computerSelection = getComputerChoice();
 
-     playerVerdict = playRound(playerSelection, computerSelection);
+     let playerVerdict = playRound(playerSelection, computerSelection);
      console.log("You " + playerVerdict + " Round");
      
      if (playerVerdict == "Win") {
@@ -65,11 +64,11 @@ function game (totalRounds=5) {
 
    console.log("Game Over!");
    if (playerScore > computerScore) console.log("You Win Overall!");
-   else if (playerScore = computerScore) console.log("Draw Game Overall!");
+   else if (playerScore == computerScore) console.log("Draw Game Overall!");
    else console.log("You Loss Overall!");
    console.log("Your Final Score: "  + playerScore + " / " + totalRounds);
    if (playerScore == totalRounds) console.log("PERFECT SCORE!!!");
-
+   if (playerScore == 0) console.log("YOU GOT WRECKED!!!");
 }
 
-game(1);
+game(3);
