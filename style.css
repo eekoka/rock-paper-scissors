@@ -1,0 +1,18 @@
+body {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #1f2937;
+    display: flex;
+}
+
+.logo {
+    flex: 1;
+    color: #f9faf8;
+    font-size: 28px;
+    font-weight: 900;
+    font-style: italic;
+}

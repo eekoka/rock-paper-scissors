@@ -89,4 +89,4 @@ function game (totalRounds=5) {
    if (playerScore == 0) console.log("YOU GOT WRECKED!!!");
 }
 
-game();
+//game();
