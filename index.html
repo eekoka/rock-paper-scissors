@@ -10,24 +10,36 @@
 </head>
 <body>
   <header>
-    <div class="logo">Rock Paper Scissors Game</div>
+    <div class="logo">The Rock Paper Scissors Game</div>
   </header>
 
   <div id="information">
-    <p id="explanation">This is a 5 round game, draws are not counted.</p>
+    <p id="explanation">Play 5 Rounds; You Versus The Computer</p>
+    <!--div placeholders for displaying results-->
+    <div class="result-sub-container">
+      <div id="player-div"></div>
+      <div id="computer-div"></div>
+    </div>
+    <div class="result-sub-container2">
+      <div id="result-line1"></div>
+      <div id="result-line2"></div>
+      <div id="result-line3"></div>
+    </div>
   </div>
 
-  <div class="instruction">Choose Rock, Paper or Scissors</div>
+  <div class="instruction">
+    <p id="sub-instruction">Choose Rock, Paper or Scissors</p>
+  </div>
 
   <div class="choice-container">
     <div class="choice-sub-container">
-      <button class="choice-button" id="rock">Rock</button>
+      <button class="choice-button" id="Rock">Rock</button>
     </div>
     <div class="choice-sub-container">
-      <button class="choice-button" id="paper">Paper</button>
+      <button class="choice-button" id="Paper">Paper</button>
     </div>
     <div class="choice-sub-container">
-      <button class="choice-button" id="scissors">Scissors</button>
+      <button class="choice-button" id="Scissors">Scissors</button>
     </div>
   </div>
 

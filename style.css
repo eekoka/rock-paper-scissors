@@ -30,16 +30,19 @@ footer {
 
 .choice-container {
     display: flex;
+    flex-direction: column;
     flex: 1;
     flex-wrap: wrap;
     margin: 20px;
     gap: 20px;
+    justify-content: center;
 }
 
 .choice-sub-container {
     display: flex;
     flex: 1;
     justify-content: center;
+    flex-wrap: wrap;
     background: blue;
 }
 
@@ -54,7 +57,7 @@ footer {
     border-color: #e5e7eb;*/
     border-radius: 8px;
     font-size: 20px;
-    min-width: 120px;
+    min-width: 220px;
     max-height: 36px;
     padding: 4px 16px;
     border-style: solid;
@@ -66,4 +69,23 @@ footer {
     font-size: 28px;
     font-weight: 900;
     font-style: italic;
+}
+
+.result-sub-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#player-div, #computer-div {
+    flex: 1;
+}
+
+#result-line1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#result-line2, #result-line3 {
+    font-size: 55px;
+    font-weight: 800;
 }
