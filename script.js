@@ -15,6 +15,11 @@ function getComputerChoice() {
    return computerChoice;
 }
 
+function getPlayerChoice(idValue) {
+   let playerRef = document.querySelector("#"+idValue);
+   return playerRef.textContent;
+}
+
 function playRound(playerSelection, computerSelection) {
    playerSelection = playerSelection.toUpperCase();
    computerSelection = computerSelection.toUpperCase();
@@ -58,7 +63,7 @@ function game () {
          //do not run of total number of rounds achieved
          if (r > totalRounds) return;
       
-         const playerSelection = e.target.id; 
+         const playerSelection = getPlayerChoice(e.target.id); 
          const computerSelection = getComputerChoice();
 
          playerVerdict = playRound(playerSelection, computerSelection);
