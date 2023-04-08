@@ -30,7 +30,6 @@ footer {
 
 .choice-container {
     display: flex;
-    flex-direction: column;
     flex: 1;
     flex-wrap: wrap;
     margin: 20px;
@@ -43,7 +42,6 @@ footer {
     flex: 1;
     justify-content: center;
     flex-wrap: wrap;
-    background: blue;
 }
 
 .choice-sub-container img {
@@ -76,8 +74,17 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 #player-div, #computer-div {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-div-text, #computer-div-text {
+    flex: 1;
+    font-weight: 900;
 }
 
 #result-line1 {
@@ -85,7 +92,12 @@ footer {
     font-weight: 900;
 }
 
-#result-line2, #result-line3 {
-    font-size: 55px;
+#result-line2 {
+    font-size: 85px;
+    font-weight: 800;
+}
+
+#result-line3 {
+    font-size: 45px;
     font-weight: 800;
 }
