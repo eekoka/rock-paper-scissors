@@ -46,12 +46,19 @@ function game () {
    const playerDivText = document.querySelector("#player-div-text");
    const computerDivText = document.querySelector("#computer-div-text");
 
+   //image elements to use below
    const playerImg = document.createElement("img");
    const computerImg = document.createElement("img");
 
+   //selecting div to display results in
    const resultDiv1 = document.querySelector("#result-line1");
    const resultDiv2 = document.querySelector("#result-line2");
    const resultDiv3 = document.querySelector("#result-line3");
+
+   //button element to refresh pages after game is over
+   const replayBtn = document.createElement("button");
+   replayBtn.textContent = "PlAy AgAiN";
+   replayBtn.onclick = () => location.reload();
 
    //initialize variables
    let playerScore = 0;
@@ -131,8 +138,12 @@ function game () {
             resultDiv2.textContent = playerScore + " - " + computerScore;
             resultDiv3.textContent = "Game Over: " + finalResult;
 
+             //add refresh button to replay game
+
             if (computerScore == 0) resultDiv3.textContent += ", PERFECT SCORE!";
             if (playerScore == 0) resultDiv3.textContent += ", YOU GOT WRECKED!";
+
+            resultDiv3.appendChild(replayBtn);
          }
 
    });
