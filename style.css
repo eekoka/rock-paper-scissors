@@ -42,6 +42,7 @@ footer {
     flex: 1;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 220px;
 }
 
 .choice-sub-container img {
